@@ -12,7 +12,8 @@ nav {
         display: block;
         padding: 0 20px;
         line-height: 70px;
-        background: #262626;
+        /* background: #262626; */
+        background: #000000;
         color: #ffffff;
         text-decoration: none; }
         nav ul li a:hover {
@@ -98,7 +99,8 @@ nav {
     display: block !important; } }
 .navigation {
   height: 70px;
-  background: #262626; }
+  background: #000000 ; }
+  /* background: #262626; } */
 
 .nav-container {
   max-width: 1000px;
