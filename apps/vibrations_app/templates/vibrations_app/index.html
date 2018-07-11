@@ -1,436 +1,365 @@
-<!DOCTYPE html>
-<html lang="en">
-{% load staticfiles %}
+ {% extends 'vibrations_app/base.html' %} {% block body %} {% load staticfiles %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Good Vibration Communications</title>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
-    <!-- css -->
+    /* The Modal (background) */
 
-    <link rel="stylesheet" href="{% static 'vibrations_app/css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'vibrations_app/css/nav.css' %}">
-    <link rel="stylesheet" href="{% static 'vibrations_app/css/style-gv.css' %}">
-    <link rel="stylesheet" href="{% static 'vibrations_app/css/modal.css' %}">
-    <link rel="stylesheet" href="{% static 'vibrations_app/css/media-queries.css' %}">
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
 
-    <!-- boostrap -->
+    /* Modal Content */
 
-    <!-- <script src="{% static 'vibrations_app/javascript/scripts.js' %}"></script> -->
-    <script src="{% static 'vibrations_app/javascript/script2.js' %}"></script>
-    <!-- <script src="{% static 'vibrations_app/javascript/wow.js' %}"></script> -->
-    <!-- <script src="{% static 'vibrations_app/javascript/retina-1.1.0.js' %}"></script> -->
-    <!-- <script src="{% static 'vibrations_app/javascript/jquery.backstretch.js' %}"></script> -->
-    <!-- <script src="{% static 'vibrations_app/javascript/jquery-migrate-3.0.0.min.js' %}"></script> -->
-    <!-- <script src="{% static 'vibrations_app/javascript/retina-1.1.0.js' %}"></script> -->
-    <!-- <script src="{% static 'vibrations_app/javascript/jquery-3.2.1.min.js' %}"></script> -->
-    <!-- <script src="{% static 'vibrations_app/javascript/modal-script.js' %}"></script> -->
+    .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 80%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+    }
 
+    /* Add Animation */
 
-    <!-- CSS only -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-        crossorigin="anonymous">
-    <!-- JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-        crossorigin="anonymous"></script>
-
-
-    <!-- fonts -->
-
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-</head>
-
-<body>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
+    @-webkit-keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0
         }
-
-        /* The Modal (background) */
-
-        .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Sit on top */
-            padding-top: 100px;
-            /* Location of the box */
-            left: 0;
+        to {
             top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
+            opacity: 1
         }
+    }
 
-        /* Modal Content */
-
-        .modal-content {
-            position: relative;
-            background-color: #fefefe;
-            margin: auto;
-            padding: 0;
-            border: 1px solid #888;
-            width: 80%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -webkit-animation-name: animatetop;
-            -webkit-animation-duration: 0.4s;
-            animation-name: animatetop;
-            animation-duration: 0.4s
+    @keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0
         }
-
-        /* Add Animation */
-
-        @-webkit-keyframes animatetop {
-            from {
-                top: -300px;
-                opacity: 0
-            }
-            to {
-                top: 0;
-                opacity: 1
-            }
+        to {
+            top: 0;
+            opacity: 1
         }
+    }
 
-        @keyframes animatetop {
-            from {
-                top: -300px;
-                opacity: 0
-            }
-            to {
-                top: 0;
-                opacity: 1
-            }
-        }
+    /* The Close Button */
 
-        /* The Close Button */
+    .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
 
-        .close {
-            color: white;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
 
-        .close:hover,
-        .close:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
-        }
+    .modal-header {
+        padding: 2px 16px;
+        background-color: #5cb85c;
+        color: white;
+    }
 
-        .modal-header {
-            padding: 2px 16px;
-            background-color: #5cb85c;
-            color: white;
-        }
+    .modal-body {
+        padding: 2px 16px;
+    }
 
-        .modal-body {
-            padding: 2px 16px;
-        }
+    .modal-footer {
+        padding: 2px 16px;
+        background-color: #5cb85c;
+        color: white;
+    }
+</style>
 
-        .modal-footer {
-            padding: 2px 16px;
-            background-color: #5cb85c;
-            color: white;
-        }
-    </style>
-    <!-- navbar -->
-
-
-    <section class="navigation">
-        <div class="nav-container">
-            <div class="brand">
-                <a href="#!">
-                    <span style="font-family: 'Kaushan Script', cursive;">Good Vibrations Communications</span>
-                </a>
-            </div>
-            <nav>
-                <div class="nav-mobile">
-                    <a id="nav-toggle" href="#!">
-                        <span></span>
-                    </a>
+<div class="container-fluid mobile" style="padding: 0">
+    <div class="row home-back">
+        <div class="col-sm-12" style="padding: 50px;">
+            <div class="row profile">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6" style="color: white">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <img id="pro-pic" src="{% static 'vibrations_app/images/amanie_profile.jpg' %}" alt="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 text-center">
+                                    <h1 class="name">Amanie Foster</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 pro-text">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h1>Business Development Manager</h1>
+                                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis officia sed quos
+                                        aliquam amet omnis saepe, dolorum placeat. Quos voluptates ipsum unde illum ipsam
+                                        blanditiis cumque debitis nam quisquam maxime.</h4>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <img src="{% static 'vibrations_app/images/flower_logo.png' %}" alt=""> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <ul class="nav-list">
-                    <li>
-                        <a href="#!">Home</a>
-                    </li>
-                    <li>
-                        <a href="#!">About</a>
-                    </li>
-                    <li>
-                        <a href="#!">Services</a>
-                        <ul class="nav-dropdown">
-                            <li>
-                                <a href="#!">Web Design</a>
-                            </li>
-                            <li>
-                                <a href="#!">Web Development</a>
-                            </li>
-                            <li>
-                                <a href="#!">Graphic Design</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#!">Pricing</a>
-                    </li>
-                    <li>
-                        <a href="#!">Contact</a>
-                    </li>
-                </ul>
-            </nav>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="row">
+        <div class="col-sm-12">
+            <video poster="{%  static 'vibrations_app/images/boatparty1.jpg' %}" loop autoplay>="true">
+                <source src="{% static 'vibrations_app/videos/live.mp4' type='video/mp4' %}">
+            </video>
+            <img class="amanie-profile" src="{% static 'vibrations_app/images/amanie_profile.jpg' %}" alt="">
+            <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam eum consequatur minima nihil hic a voluptatem
+                eligendi eos odit impedit, pariatur ipsam consectetur maiores officiis rerum totam quae temporibus modi!
+                Assumenda, neque doloribus nulla fuga quas laborum sint facere.</div>
+        </div>
+    </div> -->
+</div>
+<div class="container-fluid">
+    <section class="row">
+        <div class="about col-sm-12 ">
+            <h1 class="fam">About Amanie</h1>
+
+            <p>
+                <img class="grad" src="{% static 'vibrations_app/images/grad.jpg' %}" alt=""> &emsp;Alumni of Purdue University Northwest located in Hammond, IN. During my college career I struggled
+                to find a path that would be beneficial to not only my educational interests but also to find interests that
+                nourished my being as an individual. I decided to major in General Communications with minors in both Advertising
+                and Visual Communications.
+                <br>
+                <br> &emsp;I chose this route because I love to communicate and articulate how I feel about various issues of
+                our world! Eventually further into my college career, I developed a love for art that I could not wait to
+                express on canvas. During my third year, I learned for to express myself through Adobe Illustrator, Photoshop,
+                and InDesign. Also during this time, I was able to exercise my leadership skills as I moved up the ladder
+                quickly at Lucky Brand Jeans.
+                <br>
+                <br> &emsp;There I learned how to SELL, STRATEGIZE, AND LEAD. Soon I became a top seller in my store; quickly
+                pushing me to a top performing manager. Within a year I had gained product knowledge about the retail industry
+                and sales but I also grew personally.
+                <br>
+                <br> &emsp;I founded a non-for-profit organization called Heavy Hearts Movement, which caters to communities
+                who may or may not be underserved, but in need. Initiatives that my organization has taken part in is a street
+                cleaning in Broadview, IL as well as a water drive in East Chicago, IN serving over 75 families to water.
+                <br>
+                <br> &emsp;I have also participated in a docu-series called Another Life dedicated to people of Chicago who lose
+                close loved ones to Chicago gun violence. There is so much that I have achieved in my lifetime so far. As
+                a recent college graduate, I execute and explore options to help not only better myself but those around
+                me. The current position I hold is at DataMine Web Solutions, Internet Marketing, and Branding as a business
+                development manager. I hope to continue to grow and develop as much as I can during my time here and where
+                ever else God leads.
+            </p>
         </div>
     </section>
-
-
-
-
-
-    <div class="container-fluid mobile">
-        <div class="row">
-            <div class="col-sm-12 home-back d-none d-sm-block">
-                <img class="vcenter center-block" src="{% static 'vibrations_app/images/flower_logo.png' %}" alt="">
-            </div>
-
-        </div>
-    </div>
-    <div class="container-fluid">
-
-        <!-- past color #342F2F -->
-        <div class="row bottom-content clearfix" style="background: #000000; padding: 15px 0px 15px 0px;">
-            <!-- <div class="col-sm-4 cl d-none d-lg-none">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LyjsVsCSCfQ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
-                    allow="autoplay; encrypted-media" autoplay="1" allowfullscreen></iframe>
-            </div> -->
-            <div class="col-md-6 start text-center" style="padding: 100px 40px 0px 40px !important;">
-                <!-- <div class="row">
-                    <div class="col-sm-12">
-                        <ul id="serve">
-                            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> Web Development</li>
-                            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> Graphic Design</li>
-                            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> Social Media</li>
-                            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> Event Planning</li>
-                        </ul>
-                    </div>
-                </div> -->
-                <div class="row">
-                    <div class="col-sm-12">
-                        <p class="">Start Your Journey with Good Vibrations to creating a company logo, branding, social marketing campaign
-                            or your own web or mobile to promote your business.</p>
-
-                        <button class="vcenter" id="btn-start">Start Here</button>
-
-                    </div>
+</div>
+<div class="container-fluid">
+    <div class="row dark" style="padding: 50px;">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-12" id="education">
+                    <h1>Education</h1>
                 </div>
             </div>
-            <div id="vibe" class="modal">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="close">&times;</span>
-                        <h2>Modal Header</h2>
-                    </div>
-                    <div class="modal-body">
-                        <p>Some text in the Modal Body</p>
-                        <p>Some other text...</p>
-                    </div>
-                    <div class="modal-footer">
-                        <h3>Modal Footer</h3>
-                    </div>
+
+            <div class="row">
+                <div class="col-sm-12 school">
+                    Purdue University Northwest-
+                    <span class="city">Hammond, IN</span>
                 </div>
             </div>
-            <div class="carousel slide frontpage-slide col-md-6" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div id="carousel" class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="{% static 'vibrations_app/images/boatparty1.jpg' %}" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="{% static 'vibrations_app/images/boatparty2.jpg' %}" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="{% static 'vibrations_app/images/boatparty6.jpg' %}" alt="Third slide">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-
-
-        <div class="row clearfix">
-            <div class="col-sm-12"></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-3 to-do">
-                <h5>Jacket Designs</h5>
-                <img src="{% static 'vibrations_app/images/demJacket.png'%}" width="400" alt="">
-            </div>
-            <div class="video col-sm-6">
-                <div id="play">
-                    <i class="fas fa-play-circle"></i>
+            <div class="row">
+                <div class="col-sm-12">
+                    <img class="school-photo" src="{% static 'vibrations_app/images/purdue.gif' %}" alt="">
                 </div>
             </div>
-            <div class="col-sm-3 to-do">
-                <h5>T-Shirts Designs</h5>
-                <img src="{% static 'vibrations_app/images/disTshirt.png'%}" width="400" alt="">
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-    <section id="footer">
-        <div class="container">
-            <div class="row text-center text-xs-center text-sm-left text-md-left">
-                <div class="col-xs-12 col-sm-4 col-md-4">
-                    <img id="footer-logo" src="{% static 'vibrations_app/images/flower_logo.png' %}" alt="">
+            <div class="row">
+                <div class="col-sm-12 study">
+                    BACHELOR OF LIBERAL ARTS UNDERGRADUATE DEGREE
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-4">
-                    <h5>Get Started</h5>
-                    <ul class="list-unstyled quick-links">
-                        <li>
-                            <a href="javascript:void();">
-                                <i class="fa fa-angle-double-right"></i>Home</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void();">
-                                <i class="fa fa-angle-double-right"></i>About
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void();">
-                                <i class="fa fa-angle-double-right"></i>Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void();">
-                                <i class="fa fa-angle-double-right"></i>Film</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void();">
-                                <i class="fa fa-angle-double-right"></i>Apparel</a>
-                        </li>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 desc">
+                    <ul style="list-style: none; ">
+                        <li>Major: General Communications</li>
+                        <li>Minor: Visual Communications and Advertising</li>
+                        <li>Cumulative GPA 3.0</li>
+
                     </ul>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-4">
-                    <h5>Support</h5>
-                    <ul class="list-unstyled quick-links">
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+
+    <!-- past color #342F2F -->
+    <div class="row bottom-content clearfix" style="background: #000000; padding: 15px 0px 15px 0px;">
+
+        <div class="col-md-6 start text-center" style="padding: 100px 40px 0px 40px !important;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul id="serve">
                         <li>
-                            <a href="javascript:void();">
-                                <i class="fa fa-angle-double-right"></i>Contact</a>
-                        </li>
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i> Web Development</li>
                         <li>
-                            <a href="javascript:void();">
-                                <i class="fa fa-angle-double-right"></i>About</a>
-                        </li>
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i> Graphic Design</li>
                         <li>
-                            <a href="javascript:void();">
-                                <i class="fa fa-angle-double-right"></i>FAQ</a>
-                        </li>
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i> Social Media</li>
                         <li>
-                            <a href="javascript:void();">
-                                <i class="fa fa-angle-double-right"></i>Terms and Conditions</a>
-                        </li>
-                        <!-- <li>
-                            <a href="https://wwwe.sunlimetech.com" title="Design and developed by">
-                                <i class="fa fa-angle-double-right"></i>Imprint</a>
-                        </li> -->
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i> Event Planning</li>
                     </ul>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-                    <ul class="list-unstyled list-inline social text-center">
-                        <li class="list-inline-item">
-                            <a href="javascript:void();">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="javascript:void();">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="javascript:void();">
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="javascript:void();">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="javascript:void();" target="_blank">
-                                <i class="fa fa-envelope"></i>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="col-sm-12">
+                    <p class="">Start Your Journey with Good Vibrations to creating a company logo, branding, social marketing campaign
+                        or your own web or mobile to promote your business.</p>
+
+                    <button class="vcenter" id="btn-start">Start Here</button>
+
                 </div>
-                </hr>
             </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-                    <p>Good Vibrations Communications, LLC</p>
-                    <p class="h6">&copy All right Reversed.
-                        <a class="text-green ml-2" href="http://www.brysonmckenzie.com" target="_blank">Six Eleven Web Design</a>
+        </div>
+        <div id="vibe" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Modal Header</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Some text in the Modal Body</p>
+                    <p>Some other text...</p>
+                </div>
+                <div class="modal-footer">
+                    <h3>Modal Footer</h3>
+                </div>
+            </div>
+        </div>
+        <div class="carousel slide frontpage-slide col-md-6" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div id="carousel" class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="{% static 'vibrations_app/images/boatparty1.jpg' %}" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{% static 'vibrations_app/images/boatparty2.jpg' %}" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{% static 'vibrations_app/images/boatparty6.jpg' %}" alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="row clearfix">
+        <div class="col-sm-12">
+            <h1 class="fam" style="text-align: center; margin: 50px;">Amanie's Apparel</h1>
+        </div>
+        <div class="col-sm-6 to-do">
+            <h5>Jacket Designs</h5>
+            <img src="{% static 'vibrations_app/images/demJacket.png'%}" width="400" alt="">
+            <a class="view" href="">View More</a>
+
+        </div>
+
+        <div class="col-sm-6 to-do">
+            <h5>T-Shirts Designs</h5>
+            <img src="{% static 'vibrations_app/images/disTshirt.png'%}" width="400" alt="">
+            <a class="view" href="">View More</a>
+
+        </div>
+    </div>
+    <div class="row contact-background">
+
+            <div class="col-sm-12 contact-right">
+                <div class="clist">
+                    <h1>Contact</h1>
+                    <h4>Phone</h4>
+                    <p>
+                        <a href="tel:7026083191">
+                            <i class="fa fa-phone" style="color: white;"></i>(702) 608-3191</a>
+                    </p>
+                    <h4>Email</h4>
+                    <p>
+                        <a href="mailto:sixelevensolutions@gmail.com">
+                            <i class="fa fa-envelope" style="color: white; "></i>sixelevensolutions@gmail.com</a>
                     </p>
                 </div>
-                </hr>
             </div>
         </div>
-    </section>
-    <script>
-        var modal = document.getElementById('vibe');
-        var btn = document.getElementById('btn-start');
-        var span = document.getElementsByClassName('close')[0];
+</div>
 
-        btn.onclick = function () {
-            modal.style.display = "block";
-        };
-        span.onclick = function () {
-            modal.style.display = "none";
-        };
-        window.onclick = function () {
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            };
-        };
-    </script>
-</body>
 
-</html>
+
+
+
+
+
+
+<script>
+    var modal = document.getElementById('vibe');
+    var btn = document.getElementById('btn-start');
+    var span = document.getElementsByClassName('close')[0];
+
+    btn.onclick = function () {
+        modal.style.display = "block";
+    };
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+    window.onclick = function () {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        };
+    };
+</script> {% endblock %}
