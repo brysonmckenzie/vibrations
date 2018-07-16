@@ -2,10 +2,12 @@
     margin: 0 !important;
     padding: 0!important;
 } */
-@font-face{
+
+@font-face {
     font-family: wilderness;
     src: url(/static/vibrations_app/fonts/Wilderness.ttf)
 }
+
 /* .mobile {
     height: 250px;
     background-color: black;
@@ -16,19 +18,18 @@
 } */
 
 .home-back {
-    border-bottom: 5px solid black;
-    background: rgba(0 , 0, 0,0.6);
+    border-bottom: 1px solid white;
+    background: rgba(0, 0, 0, 0.6);
     height: 100%;
-    width: 100%;
+    /* width: 100%; */
     position: relative;
-    
 }
+
 .home-back::after {
     content: '';
     background: url(/static/vibrations_app/images/main-back3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-
     display: block;
     position: absolute;
     top: 0;
@@ -36,7 +37,6 @@
     right: 0;
     left: 0;
     z-index: -1
-
 }
 
 .start {
@@ -53,6 +53,15 @@
     background: #000000;
     width: 100%;
     height: 100%;
+}
+
+.media-title{
+    font-family: Wilderness;
+    text-align: center;
+    color: white;
+}
+.media-title h1{
+    font-size: 150pt;
 }
 
 #serve {
@@ -81,10 +90,88 @@
     margin-top: 30px;
     margin-bottom: 30px;
 }
+#marketing{
+    float: right;
+    margin-left: 2em;
+    margin-bottom: 0.5em;
+    shape-outside: url(/static/vibrations_app/images/services.png)
+}
 
 #carousel {
+    /* margin-left: 20px; */
+    /* padding: 
+    25px 25px 0px 25; */
     height: 100%;
-    /* width: 100%; */
+    /* width:  */
+    /* position: absolute; */
+    display:block;
+    /* top: 50%; */
+    /* left:50%; */
+    /* transform: translateY(-50%); */
+    /* opacity: 0.5; */
+    box-shadow: 0px 0px 40px;
+    padding-left:20px;
+}
+.media-left{
+    margin-left: 50px;
+} 
+.media-txt{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0px 25px 0px 25px;
+    color: white;
+
+
+}
+.band{
+    background-color:rgba(0, 0, 0, 0.8);
+    position: relative;
+    display: block;
+    
+
+
+}
+
+.band::after{
+    content: '';
+    background-image: url(/static/vibrations_app/images/band.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+}
+
+.media-txt h1{
+    text-align: center;
+    font-size: 28pt;
+}
+
+.media-txt p{
+    font-size:  20pt;
+}
+
+video {
+    /* position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 200px;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1; */
+    width: 100%;
+    height: 600px;
+    padding: 0;
+    display: block;
+    /* position: relative; */
+    box-shadow: 0px 0px 40px black;
+    margin-top: 50px; 
 }
 
 .w-100 {
@@ -116,19 +203,13 @@
     height: 100%!important;
 }
 
-.video {
-    height: 400px;
-    width: 300px;
-    background-color: black;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
+
 
 .test {
     font-family: Open sans;
     margin-top: 10px;
     padding: 20px 10px 20px 10px;
-}
+} 
 
 .test p {
     font-size: 8pt;
@@ -147,7 +228,8 @@
     padding: 75px 0px 75px 0px;
     /* display: inline-block */
 }
-.to-do img{
+
+.to-do img {
     /* display: block;
     margin-right: auto;
     margin-left: auto; */
@@ -183,18 +265,22 @@
     min-height: 100%;
     min-width: 100%;
 } */
-video {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-height: 200px;
-    min-width: 100%;
-    width: auto;
-    height: auto;
-    z-index: 1;
+
+
+.vid-box {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
-.text{
+.vid-right{
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100
+}
+
+.text {
     z-index: 2;
     position: absolute;
     background: rgba(0, 0, 0, 0.4);
@@ -203,68 +289,78 @@ video {
     right: 0;
     left: 0;
 }
-.amanie-profile{
+
+.amanie-profile {
     position: relative;
-    top:0
+    top: 0
 }
-.profile{
+
+.profile {
     /* background: yellow; */
     height: 100%;
     width: 100%;
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    border: 2px solid white;    
+    transform: translate(-50%, -50%);
+    border: 2px solid white;
 }
-.good-l{
-    width:100%;
+
+.good-l {
+    width: 100%;
     position: relative;
     top: 50%;
     left: 51%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-#pro-pic{
+
+#pro-pic {
     height: 400px;
     height: 400px;
     position: relative;
     top: 50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     margin-top: 20px;
 }
+
 .pro-text {
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 50px 25px 50px 25px;
     width: 50%;
 }
-.pro-text h1{
+
+.pro-text h1 {
     /* text-align: center; */
-    font-size: 50pt;
+    font-size: 40pt;
     margin-bottom: 100px;
 }
-.pro-text h4{
+
+.pro-text h4 {
     /* text-align: center; */
     font-size: 18pt;
     margin-bottom: 50px;
 }
-.pro-text img{
-    width: 100%;
+
+.pro-text img {
+    width: 50%;
     /* position: relative; */
     /* transform: translateX(-50%); */
     left: 50%;
     display: block;
+    margin: 0 auto;
 }
-.name{
+
+.name {
     font-family: Wilderness;
     margin-top: 30px;
     font-size: 150pt;
 }
 
-.view{
-    padding:20px;
+.view {
+    padding: 20px;
     background-color: red;
     display: inline;
     padding: 10px 0px 10px 0px;
@@ -272,22 +368,28 @@ video {
     color: white;
     text-decoration: none;
 }
-.view:link{
+
+.view:link {
     text-decoration: none;
 }
-.view:hover{
-  
-}
-.fam{
+
+.view:hover {}
+
+.fam {
     font-family: Wilderness;
     font-size: 150px;
 }
-.box{
+
+.sexy1 {
+    margin-top: 50px;
+}
+
+.box {
     box-shadow: 5px;
     border: 1px solid black;
-    width:400px;
+    width: 400px;
     height: 100%;
-    padding:50px;
+    padding: 50px;
     position: relative;
     left: 50%;
     transform: translateX(-50%)
@@ -359,7 +461,7 @@ video {
     display: inline-block;
     /* margin-left: 100px; */
     /* line-height: 150%; */
- text-align: center;
+    text-align: center;
 }
 
 .school>h1 {
@@ -387,10 +489,6 @@ hr {
     /* font-size: 15pt; */
 }
 
-
-
-
-
 .school-photo {
     display: block;
     margin-left: auto;
@@ -399,40 +497,84 @@ hr {
     margin-bottom: 20px;
     width: 15%;
 }
-.about{
-    background: rgba(0, 0, 0, 0.5);
+
+.about {
+    background: rgba(0, 0, 0, 0.8);
+    /* background: white; */
     padding: 25px 200px 25px 200px;
-    
+    position: relative;
+    display: block;
+    /* z-index: 1; */
+    color: white;
 }
-.about::after{
-   background-image: url(/static/vibrations_app/images/boatparty1.jpg)
 
-   }
+.about::after {
+    background-color: white;
+    content: '';
+    background-image: url(/static/vibrations_app/images/purdue-back.jpg);
+    /* background-size: 100%; */
+    background-size: cover;
+    background-position: right;
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
-.about p{
+.about p {
     float: left;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20pt;
 }
-.grad{
+
+.grad {
     width: 300px;
     height: 400px;
-    float:left;
-    border: 1px solid black;
-    margin: 0px 50px 0px 0px
+    float: left;
+    border: 5px solid white;
+    margin: 0px 50px 0px 0px;
+    box-shadow: 5px 5px 35px;
 }
+
 .contact-background {
-    background-color: rgba(0, 0, 0, 0.8);
-    background-size: cover;
-    background-position: top;
+    background-color: rgba(0, 0, 0, 0.6);
     display: block;
     position: relative;
-    z-index: 0;
+    /* z-index: 0; */
+}
+
+.contact-background::after {
+    content: '';
+    background-image: url(/static/vibrations_app/images/sidewalk-model.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.sexy-line {
+    width: 90%;
+    height: 3px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), white, rgba(0, 0, 0, 0.7));
+    padding: 0px 100px 0px 100px;
 }
 
 .contact-right {
     color: white;
-    padding: 75px 50px 25px 25px;
+    /* padding: 75px 50px 25px 25px; */
 }
 
 .contact-right h1 {
@@ -479,7 +621,7 @@ hr {
     text-decoration: none;
 }
 
-.contact-background::after {
+/* .contact-background::after {
     content: '';
     background-image: url('/static/profile_app/images/background/black-keyboard.jpeg');
     display: block;
@@ -489,7 +631,8 @@ hr {
     right: 0;
     left: 0;
     z-index: -1
-}
+} */
+
 #contact {
     width: 100%;
     /* height: 535px; */
@@ -505,6 +648,7 @@ hr {
     text-align: center;
     /* border-right: 5px solid white */
 }
+
 #scontct {
     /* position: absolute; */
     width: 100%;
@@ -520,9 +664,9 @@ hr {
     text-transform: uppercase;
     /* margin-l claeft: 530px; */
     text-align: center;
-
     margin-bottom: 20px;
 }
+
 .clist {
     height: 700px;
     width: 100%;
