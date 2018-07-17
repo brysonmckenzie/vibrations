@@ -117,6 +117,7 @@
 		margin-right: auto;
 		float: unset;
 		margin-bottom: 30px;
+		box-shadow: 0px 0px 35px;
 	}
 	.about p {
 		font-size: 13pt;
