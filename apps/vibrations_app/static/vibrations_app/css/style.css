@@ -123,9 +123,11 @@
 
 }
 .band{
-    background-color:rgba(0, 0, 0, 0.8);
+    background-color:rgba(0, 0, 0, 0.6);
     position: relative;
     display: block;
+    border-top: white 2px solid;
+
     
 
 
@@ -203,7 +205,28 @@ video {
     height: 100%!important;
 }
 
+.fashion-text{}
 
+.fashion-text h1{
+    color: white;
+    margin-left: 40%;
+}
+.fashion-text p{
+    color: #6d1c6d;
+    margin-left: 50%;
+    font-size: 20pt;
+
+}
+.fashion-text p::before{
+    content: open-quote;
+}
+.fashion-text p::after{
+    content: close-quote;
+}
+.fashion-text span{
+    font-family: Wilderness;
+    font-size:100pt;
+}
 
 .test {
     font-family: Open sans;
@@ -230,10 +253,7 @@ video {
 }
 
 .to-do img {
-    /* display: block;
-    margin-right: auto;
-    margin-left: auto; */
-    transform: translateX(-11%);
+    width: 95%;
 }
 
 .to-do li {
@@ -243,7 +263,8 @@ video {
 
 .to-do h5 {
     /* margin-bottom: 50px; */
-    font-size: 20pt
+    font-size: 30pt;
+    color: #004085
 }
 
 #play {
@@ -328,31 +349,61 @@ video {
 .pro-text {
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 50px 25px 50px 25px;
+    padding: 20px 25px 50px 25px;
     width: 50%;
 }
 
 .pro-text h1 {
     /* text-align: center; */
     font-size: 40pt;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 }
 
 .pro-text h4 {
     /* text-align: center; */
-    font-size: 18pt;
+    font-size: 22pt;
     margin-bottom: 50px;
+}
+.pro-text h4::before{
+    content: open-quote ;
+
+
+}
+.pro-text h4::after{
+    content: close-quote ;
+
+
 }
 
 .pro-text img {
-    width: 50%;
+    width: 75%;
     /* position: relative; */
     /* transform: translateX(-50%); */
     left: 50%;
     display: block;
     margin: 0 auto;
 }
+.fashion{
+    background: rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: block;
+    padding-bottom:50px;
+}
+.fashion::after{
+    background-image: url(/static/vibrations_app/images/fashion-texture.jpg);
+    background-attachment: fixed;
+    content: '';
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
 
+}
 .name {
     font-family: Wilderness;
     margin-top: 30px;
@@ -361,12 +412,16 @@ video {
 
 .view {
     padding: 20px;
-    background-color: red;
-    display: inline;
-    padding: 10px 0px 10px 0px;
+    background-color: lightslategray;
+    display: block;
+    padding: 10px 10px 10px 10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
     text-decoration: none;
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    font-size: 20pt;
 }
 
 .view:link {
@@ -378,6 +433,7 @@ video {
 .fam {
     font-family: Wilderness;
     font-size: 150px;
+    color: white;
 }
 
 .sexy1 {
@@ -499,7 +555,7 @@ hr {
 }
 
 .about {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.7);
     /* background: white; */
     padding: 25px 200px 25px 200px;
     position: relative;

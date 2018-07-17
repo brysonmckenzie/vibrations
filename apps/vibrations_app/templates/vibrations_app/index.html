@@ -3,6 +3,7 @@
 <style>
     body {
         font-family: Arial, Helvetica, sans-serif;
+        overflow-x: hidden;
     }
 
     /* The Modal (background) */
@@ -106,7 +107,7 @@
 <div class="container-fluid mobile" style="padding: 0">
     <div class="row home-back">
         <div class="col-sm-12" style="padding: 50px;">
-            <div class="row profile">
+            <div class="row profile" style="margin: 0;">
                 <div class="col-sm-12">
                     <div class="row">
                         <div class="col-sm-6" style="color: white">
@@ -129,15 +130,7 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <h1>Business Development Manager</h1>
-                                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eum culpa fuga accusantium
-                                        dolorum atque perspiciatis ullam voluptatem nihil assumenda debitis necessitatibus
-                                        quos fugiat cumque esse voluptatum minima rem nemo illo aliquid, amet iusto adipisci.
-                                        Sapiente magnam facilis animi, esse enim autem voluptatibus similique. Nisi tenetur
-                                        ut ea minima fugiat. Magnam a, soluta, nostrum ipsam repellat suscipit quae nulla
-                                        obcaecati inventore aut eaque similique quas, doloribus aperiam provident quasi ducimus
-                                        repellendus alias excepturi officiis tempore perferendis exercitationem assumenda
-                                        facilis. Impedit inventore quam molestias optio praesentium voluptatum nisi veniam
-                                        quod, placeat ab sint aliquam atque accusantium tempore quae doloribus eveniet distinctio?</h4>
+                                    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio illo eligendi quisquam vel placeat vitae praesentium. Culpa, atque aliquid. Eum harum ipsa possimus totam sapiente impedit sed corrupti. Qui, nisi.</h4>
                                 </div>
 
                             </div>
@@ -161,7 +154,8 @@
 </div>
 <div class="container-fluid about   ">
     <section class="row ">
-        <div class=" col-sm-12 ">
+        <div class=" col-sm-12 " style="    padding: 0px 25px 0px 25px;
+        ">
             <h1 class="fam">About Amanie</h1>
 
             <p>
@@ -239,7 +233,7 @@
 <div class="container-fluid band">
     <div class="row">
         <div class="col-sm-12 media-title">
-            <h1>Media</h1>
+            <h1>Good Vibrations Entertainment</h1>
         </div>
     </div>
     <div class="row">
@@ -275,7 +269,7 @@
 
                 <div class="col-sm-6 media-txt">
                     <!-- <h1>Good Vibrations</h1> -->
-                    <img id="marketing" src="{% static 'vibrations_app/images/services.png'%}" alt="">
+                    <img class="d-none d-md-block" id="marketing" src="{% static 'vibrations_app/images/services.png'%}" alt="">
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint vero consequatur animi iure esse neque
                         voluptates laborum accusamus. Iste perferendis totam aut praesentium quibusdam quod voluptate quae
                         non architecto assumenda commodi, iusto dolore molestias numquam autem culpa sequi odio soluta veniam
@@ -285,7 +279,7 @@
                 </div>
             </div>
             <div class="row">
-                <video class="col-sm-12" autoplay controls >
+                <video class="col-sm-12"  controls>
                     <source src="{% static 'vibrations_app/videos/live.mp4' %}">
                 </video>
             </div>
@@ -296,43 +290,67 @@
 
     </div>
 </div>
-<div class="row">
-    <div class="col-sm-12">
-        <h1 class="fam" style="text-align: center; margin: 50px;">Amanie's Apparel</h1>
-    </div>
-    <div class="col-sm-6 to-do">
-        <h5>Jacket Designs</h5>
-        <img src="{% static 'vibrations_app/images/demJacket.png'%}" width="400" alt="">
-        <a class="view" href="">View More</a>
+<div class="container-fluid fashion ">
+    <div class="row ">
+        <div class="col-sm-12">
+            <h1 class="fam" style="text-align: center; margin: 50px;">Apparel</h1>
+        </div>
+        <div class="col-sm-6 to-do">
+            <h5>Jacket Designs</h5>
+            <img src="{% static 'vibrations_app/images/demJacket.png'%}" width="400" alt="">
+            <a class="view" href="">View More</a>
+        </div>
 
-    </div>
+        <div class="col-sm-6 to-do">
+            <h5>T-Shirts Designs</h5>
+            <img src="{% static 'vibrations_app/images/disTshirt.png'%}" width="400" alt="">
+            <a class="view" href="">View More</a>
 
-    <div class="col-sm-6 to-do">
-        <h5>T-Shirts Designs</h5>
-        <img src="{% static 'vibrations_app/images/disTshirt.png'%}" width="400" alt="">
-        <a class="view" href="">View More</a>
-
-    </div>
-</div>
-<div class="row contact-background">
-    <div class="col-sm-12 contact-right">
-        <div class="clist">
-            <h1>Contact</h1>
-            <h4>Phone</h4>
-            <p>
-                <a href="tel:7026083191">
-                    <i class="fa fa-phone" style="color: white;"></i>(702) 608-3191</a>
-            </p>
-            <h4>Email</h4>
-            <p>
-                <a href="mailto:sixelevensolutions@gmail.com">
-                    <i class="fa fa-envelope" style="color: white; "></i>sixelevensolutions@gmail.com</a>
-            </p>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 fashion-text">
+                <div class="row" style="padding:10px !important;">
+                    <div class="col-sm-12">
+                        <h1>Fashion Designed by
+                            <span>Amanie Foster</span>
+                        </h1>
+                    </div>
+                    <div class="col-sm-12">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, aliquid corrupti id dolores dicta
+                            doloribus est eos ipsa voluptas reprehenderit, obcaecati commodi aspernatur aperiam possimus
+                            consequuntur excepturi. Fugiat, nobis labore!
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+<div class="container-fluid">
+    <div class="row contact-background">
+        <div class="col-sm-12 contact-right">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="clist">
+                        <h1>Contact</h1>
+                        <h4>Phone</h4>
+                        <p>
+                            <a href="tel:3128138221">
+                                <i class="fa fa-phone" style="color: white;"></i>(312) 813-8221</a>
+                        </p>
+                        <h4>Email</h4>
+                        <p class="small">
+                            <a href="mailto:amaniefoster@gmail.com">
+                                <i class="fa fa-envelope" style="color: white; "></i>amaniefoster@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-</div>
+
+
 
 
 
