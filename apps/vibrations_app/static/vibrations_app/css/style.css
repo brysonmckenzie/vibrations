@@ -639,7 +639,7 @@ hr {
     background-image: url(/static/vibrations_app/images/purdue-back.jpg);
     /* background-size: 100%; */
     background-size: cover;
-    background-position: right;
+    /* background-position: right; */
     position: absolute;
     display: block;
     top: 0;
