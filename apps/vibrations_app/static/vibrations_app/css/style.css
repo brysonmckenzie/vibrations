@@ -59,7 +59,7 @@ nav {
 }
 
 @font-face {
-    font-family: wilderness;
+    font-family: Wilderness;
     src: url(/static/vibrations_app/fonts/Wilderness.ttf)
 }
 
@@ -184,7 +184,7 @@ nav {
 }
 
 .media-txt {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Abel', sans-serif;
     padding: 0px 25px 0px 25px;
     color: white;
 }
@@ -271,7 +271,10 @@ video {
     height: 100%!important;
 }
 
-.fashion-text {}
+.fashion-text {
+    font-family: 'Abel', sans-serif;
+
+}
 
 .fashion-text h1 {
     color: white;
@@ -298,7 +301,7 @@ video {
 }
 
 .test {
-    font-family: Open sans;
+    font-family: 'Abel', sans-serif;
     margin-top: 10px;
     padding: 20px 10px 20px 10px;
 }
@@ -418,7 +421,7 @@ video {
 
 .pro-text {
     color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Abel', sans-serif;
     width: 50%;
 }
 
@@ -484,7 +487,7 @@ video {
     background-color: lightslategray;
     display: block;
     padding: 10px 10px 10px 10px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Abel', sans-serif;
     color: white;
     text-decoration: none;
     width: 200px;
@@ -534,7 +537,7 @@ video {
     text-align: center;
     top: 0vh;
     color: #fff;
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    font-family: 'Abel', sans-serif;
     letter-spacing: .7em;
     font-size: 20pt;
     font-weight: normal;
@@ -549,7 +552,7 @@ video {
     text-align: center;
     top: 0vh;
     color: #fff;
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    font-family: 'Abel', sans-serif;
     letter-spacing: .7em;
     font-size: 20pt;
     font-weight: normal;
@@ -562,7 +565,7 @@ video {
     padding: 0px 50px 0px 50px;
     width: 100%;
     color: #fff;
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    font-family: 'Abel', sans-serif;
     /* letter-spacing: .7em; */
     font-size: 14pt;
     font-weight: normal;
@@ -576,7 +579,7 @@ video {
     padding: 0px 50px 0px 50px;
     width: 100%;
     color: #fff;
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    font-family: 'Abel', sans-serif;
     /* letter-spacing: .7em; */
     font-size: 14pt;
     font-weight: normal;
@@ -592,7 +595,7 @@ video {
 .school>h1 {
     width: 980px;
     color: #fff;
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    font-family: 'Abel', sans-serif;
     /* letter-spacing: .7em; */
     font-size: 16pt;
     font-weight: normal;
@@ -653,7 +656,7 @@ hr {
 
 .about p {
     float: left;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Abel', sans-serif;
     font-size: 20pt;
 }
 
@@ -714,7 +717,7 @@ hr {
 }
 
 .contact-right h4 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Abel', sans-serif;
     letter-spacing: .7em;
     font-size: 20pt;
     font-weight: normal;
@@ -724,7 +727,7 @@ hr {
 }
 
 .contact-right p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Abel', sans-serif;
     letter-spacing: .7em;
     font-size: 12pt;
     font-weight: normal;
@@ -797,5 +800,5 @@ hr {
     width: 100%;
     padding: 0px 0px 0px 50px;
     /* border-left: white 3px solid; */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Source Sans Pro', sans-serif;
 }
