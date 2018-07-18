@@ -1,21 +1,79 @@
-/* .container-fluid {
-    margin: 0 !important;
-    padding: 0!important;
-} */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    overflow-x: hidden;
+    margin-top: 75px !important;
+}
+
+nav {
+    width: 100%;
+    position: fixed !important;
+    z-index: 1;
+    top: 0;
+    background-image: url(/static/vibrations_app/images/abstract_background1.jpg)!important;
+    background-size: cover;
+    background-position: center left;
+    color: white;
+}
 
 @font-face {
     font-family: wilderness;
     src: url(/static/vibrations_app/fonts/Wilderness.ttf)
 }
 
-/* .mobile {
-    height: 250px;
-    background-color: black;
-    background-image: url(/static/vibrations_app/images/flower_logo.png);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-} */
+.bg-light {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.nav-vibes {
+    font-size: 40pt;
+    text-transform: uppercase;
+    font-family: Wilderness;
+    font-weight: 800;
+    margin: auto;
+}
 
 .home-back {
     border-bottom: 1px solid white;
@@ -23,6 +81,10 @@
     height: 100%;
     /* width: 100%; */
     position: relative;
+}
+
+.sticky {
+    background: rgba(0, 0, 0, 0.5)!important;
 }
 
 .home-back::after {
@@ -38,6 +100,8 @@
     left: 0;
     z-index: -1
 }
+
+.sticky {}
 
 .start {
     /* background: #342F2F; */
@@ -55,12 +119,13 @@
     height: 100%;
 }
 
-.media-title{
+.media-title {
     font-family: Wilderness;
     text-align: center;
     color: white;
 }
-.media-title h1{
+
+.media-title h1 {
     font-size: 150pt;
 }
 
@@ -90,7 +155,8 @@
     margin-top: 30px;
     margin-bottom: 30px;
 }
-#marketing{
+
+#marketing {
     float: right;
     margin-left: 2em;
     margin-bottom: 0.5em;
@@ -104,36 +170,33 @@
     height: 100%;
     /* width:  */
     /* position: absolute; */
-    display:block;
+    display: block;
     /* top: 50%; */
     /* left:50%; */
     /* transform: translateY(-50%); */
     /* opacity: 0.5; */
     box-shadow: 0px 0px 40px;
-    padding-left:20px;
+    padding-left: 20px;
 }
-.media-left{
+
+.media-left {
     margin-left: 50px;
-} 
-.media-txt{
+}
+
+.media-txt {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 0px 25px 0px 25px;
     color: white;
-
-
 }
-.band{
-    background-color:rgba(0, 0, 0, 0.6);
+
+.band {
+    background-color: rgba(0, 0, 0, 0.6);
     position: relative;
     display: block;
     border-top: white 2px solid;
-
-    
-
-
 }
 
-.band::after{
+.band::after {
     content: '';
     background-image: url(/static/vibrations_app/images/band.jpg);
     background-position: center;
@@ -145,16 +208,15 @@
     left: 0;
     right: 0;
     z-index: -1;
-
 }
 
-.media-txt h1{
+.media-txt h1 {
     text-align: center;
     font-size: 28pt;
 }
 
-.media-txt p{
-    font-size:  20pt;
+.media-txt p {
+    font-size: 20pt;
 }
 
 video {
@@ -173,7 +235,7 @@ video {
     display: block;
     /* position: relative; */
     box-shadow: 0px 0px 40px black;
-    margin-top: 50px; 
+    margin-top: 50px;
 }
 
 .w-100 {
@@ -200,39 +262,46 @@ video {
     width: 70%;
 }
 
+.nav-item a {
+    color: white !important;
+}
+
 .carousel-inner>.active, .carousel-inner>.next, .carousel-inner>.prev {
     width: 100%!important;
     height: 100%!important;
 }
 
-.fashion-text{}
+.fashion-text {}
 
-.fashion-text h1{
+.fashion-text h1 {
     color: white;
     margin-left: 40%;
 }
-.fashion-text p{
+
+.fashion-text p {
     color: #6d1c6d;
     margin-left: 50%;
     font-size: 20pt;
-
 }
-.fashion-text p::before{
+
+.fashion-text p::before {
     content: open-quote;
 }
-.fashion-text p::after{
+
+.fashion-text p::after {
     content: close-quote;
 }
-.fashion-text span{
+
+.fashion-text span {
     font-family: Wilderness;
-    font-size:100pt;
+    font-size: 100pt;
 }
 
 .test {
     font-family: Open sans;
     margin-top: 10px;
     padding: 20px 10px 20px 10px;
-} 
+}
 
 .test p {
     font-size: 8pt;
@@ -287,7 +356,6 @@ video {
     min-width: 100%;
 } */
 
-
 .vid-box {
     background-color: rgba(0, 0, 0, 0.4);
     width: 400px;
@@ -296,7 +364,8 @@ video {
     top: 0;
     right: 0;
 }
-.vid-right{
+
+.vid-right {
     background: rgba(0, 0, 0, 0.5);
     z-index: 100
 }
@@ -364,15 +433,13 @@ video {
     font-size: 22pt;
     margin-bottom: 50px;
 }
-.pro-text h4::before{
-    content: open-quote ;
 
-
+.pro-text h4::before {
+    content: open-quote;
 }
-.pro-text h4::after{
-    content: close-quote ;
 
-
+.pro-text h4::after {
+    content: close-quote;
 }
 
 .pro-text img {
@@ -383,13 +450,15 @@ video {
     display: block;
     margin: 0 auto;
 }
-.fashion{
+
+.fashion {
     background: rgba(0, 0, 0, 0.2);
     position: relative;
     display: block;
-    padding-bottom:50px;
+    padding-bottom: 50px;
 }
-.fashion::after{
+
+.fashion::after {
     background-image: url(/static/vibrations_app/images/fashion-texture.jpg);
     background-attachment: fixed;
     content: '';
@@ -402,8 +471,8 @@ video {
     left: 0;
     right: 0;
     z-index: -1;
-
 }
+
 .name {
     font-family: Wilderness;
     margin-top: 30px;

@@ -84,8 +84,7 @@
 
 @media (max-width: 560px) {
 	body {
-		/* background:yellow; */
-	}
+	margin: 0 !important;
 }
 
 @media (min-width:560px) {
@@ -100,6 +99,11 @@
 }
 
 @media screen and (max-width: 576px) {
+	nav {
+		position: unset;;
+		top: unset;
+	}
+
 	.fam {
 		text-align: center;
 		font-size: 70pt;
@@ -133,7 +137,7 @@
 		margin-top: 30px;
 		font-size: 60pt;
 	}
-	.pro-text{
+	.pro-text {
 		padding: 50px 25px 0px 25px;
 	}
 	.pro-text h1 {
@@ -156,20 +160,18 @@
 	.small {
 		font-size: 0.67em !important;
 	}
-	.fashion-text{
-	}
-	.fashion-text h1{
+	.fashion-text {}
+	.fashion-text h1 {
 		color: white;
 		/* margin-left: 40%; */
 		display: block;
 		font-size: 21pt;
 		margin: auto;
 	}
-	.fashion-text span{
-	
+	.fashion-text span {
 		font-size: 62pt;
 	}
-	.fashion-text p{
+	.fashion-text p {
 		color: #6d1c6d;
 		/* margin-left: 50%; */
 		font-size: 18pt;
@@ -185,8 +187,8 @@
 		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 		margin-bottom: 50px;
 	}
-	#footer{
-		padding-top: 50px;	
+	#footer {
+		padding-top: 50px;
 	}
 	/* .contact-right p {
 		font-size: 12pt;
