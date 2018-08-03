@@ -1,6 +1,6 @@
  {% extends 'vibrations_app/base.html' %} {% block body %} {% load staticfiles %}
 
-<div class="container-fluid mobile" style="padding: 0">
+<div class="container-fluid">
     <div class="row home-back">
         <div class="col-sm-12" style="padding: 50px;">
             <div class="row profile" style="margin: 0;">
@@ -26,7 +26,7 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <h1>Business Development Manager</h1>
-                                    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio illo eligendi quisquam vel placeat vitae praesentium. Culpa, atque aliquid. </h4>
+                                    <h4 id="bw">Black and White with a Splash of Color</h4>
                                 </div>
 
                             </div>
@@ -39,8 +39,7 @@
 </div>
 <div class="container-fluid about">
     <section class="row ">
-        <div class=" col-sm-12 " style="    padding: 0px 25px 0px 25px;
-        ">
+        <div class=" col-sm-12 ">
             <h1 class="fam">About Amanie</h1>
 
             <p>
@@ -105,7 +104,7 @@
                         <li>Cumulative GPA 3.0</li>
                     </ul>
                     <a href="https://linkedin.com/in/amaniefoster"><i style="font-size: 4em" class="fab fa-linkedin-in"></i></a><br>
-                    <small style="color: white;">work experience</small>
+                    <small style="color: white;">check out my linkedin page to see more!     </small>
                 </div>
             </div>
 
@@ -121,15 +120,14 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12" style="padding: 0px;">
-            <div class="row" style=" padding: 25px;">
+        <div class="col-sm-12" style="padding: 0px; margin-left: auto; margin-right: auto; display: block">
 
-                <div id="carousel" style="padding: 0px;" class="col-sm-6 carousel slide frontpage-slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
+                <div id="carousel" style="padding: 0px;" class="col-sm-12 carousel slide frontpage-slide" data-ride="carousel">
+                    <!-- <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
+                    </ol> -->
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img class="d-block w-100" src="{% static 'vibrations_app/images/boatparty1.jpg' %}" alt="First slide">
@@ -150,18 +148,29 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
+            </div>
+        </div>
+                
+               <div class="row">
 
-                <div class="col-sm-6 media-txt">
+                <div class="col-sm-12 media-txt">
                     <!-- <h1>Good Vibrations</h1> -->
                     <img class="d-none d-md-block" id="marketing" src="{% static 'vibrations_app/images/services.png'%}" alt="">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint vero consequatur animi iure esse neque
-                        voluptates laborum accusamus. Iste perferendis totam aut praesentium quibusdam quod voluptate quae
-                        non architecto assumenda commodi, iusto dolore molestias numquam autem culpa sequi odio soluta veniam
-                        reiciendis ratione eaque, sint corrupti cum. Temporibus tenetur similique vel numquam odio nostrum!
-                        Sequi voluptatibus sit omnis a, necessitatibus et consectetur similique voluptate, qui error expedita
-                        optio eaque ut quaerat odit veniam odio! A fugiat deserunt nihil! Deserunt, repellendus.</p>
+                    <p>Good Vibrations Communications (herein after referred to as GV) is a limited licensed corporation. Created as a multifaceted brand specializing in a strategic marketing approach. Focused on creating and distributing consistent, valuable, and relevant content to attract and retain a clearly defined audience. Specialties of Good Vibrations consists of communal and artistic content to relay messages to consumers of brands and products that businesses offer.
+                        GV is created to be a consistent artistic maneuver of a brand’s creative direction and goals in attracting and keeping loyal consumers throughout the longevity of their business. Content created for businesses provide a clear pathway to articulate the means behind the offerings of that business in an artistic, creative manner.
+                        Through the services of Good Vibrations Communications, there is an obligation as a company to provide authenticity to the companies we service. People buy people. Once there is a connection to the brand because of the authentic nature it possess, there is large probability in growing a business’s consumer base.
+                        GV as a company and brand hopes to drive profitable consumer action towards the businesses we service. In doing so, we create your brand’s “IMAGE” through graphic design, content marketing, and event planning. Each business is given a specific strategy on how to brand their business and is provided with artistic direction on how to make their business excel in their business category.
+                        </p>
+                        <p>Objectives</p>
+                        <ul>
+                        <li>Understand companies values and beliefs (Soul of the business)</li>
+                        <li>Identify core consumers of brands and/or products (Target market)</li>
+                        <li>Navigate attraction to companies core consumers (Artistic content marketing)</li>
+                        <li>Connect to companies consumers through specialized brand (Event Planning)</li>
+                    </ul>
+                        <p>The uniqueness of Good Vibrations Communications is the ability to bring awareness to the creativeness inside each entrepreneur and company. We plan to create an unrepeatable reputation of the company by giving the consumer the ability to: understand, identify, and connect to companies through art and content marketing. The overall goal of GV is to provide companies with a brand that is easily distinguished from others because authenticity is extremely rare in our business world.</p>
                 </div>
-            </div>
+        </div>
             <div class="col-sm-12" class="row">
                 <video  controls>
                     <source src="{% static 'vibrations_app/videos/live.mp4' %}">
@@ -170,7 +179,7 @@
 
 
 
-        </div>
+        
 
     </div>
 </div>
@@ -182,33 +191,35 @@
         <div class="col-sm-6 to-do">
             <h5>Jacket Designs</h5>
             <img src="{% static 'vibrations_app/images/demJacket.png'%}" width="400" alt="">
-            <a class="view" href="">View More</a>
+            <div class="cs">Coming Soon!</div>
+            <!-- <a class="view" href="">View More</a> -->
         </div>
 
         <div class="col-sm-6 to-do">
             <h5>T-Shirts Designs</h5>
             <img src="{% static 'vibrations_app/images/disTshirt.png'%}" width="400" alt="">
-            <a class="view" href="">View More</a>
+            <div class="cs">Coming Soon!</div>
+            <!-- <a class="view" href="">View More</a> -->
 
         </div>
         <div class="row">
             <div class="col-sm-12 fashion-text">
                 <div class="row" style="padding:10px !important;">
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 text-center">
                         <h1>Fashion Designs by
-                            <span>Amanie Foster</span>
+                            <span style="display: inline; margin-left: 100px;">Amanie Foster</span>
                         </h1>
                     </div>
-                    <div class="col-sm-12">
+                    <!-- <div class="col-sm-12">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, hic!
                         </p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="row contact-background">
         <div class="col-sm-12 contact-right">
             <div class="row">
@@ -230,7 +241,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
 

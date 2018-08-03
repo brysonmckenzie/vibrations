@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+/* html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
     margin: 0;
     padding: 0;
     border: 0;
@@ -6,7 +6,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
-}
+} */
 
 body {
     line-height: 1;
@@ -44,7 +44,7 @@ table {
 
 body {
     overflow-x: hidden;
-    margin-top: 75px !important;
+    /* margin-top: 75px !important; */
 }
 
 nav {
@@ -71,7 +71,7 @@ nav {
     font-size: 40pt;
     text-transform: uppercase;
     font-family: Wilderness;
-    font-weight: 800;
+    font-weight: normal;
     margin: auto;
 }
 
@@ -100,8 +100,6 @@ nav {
     left: 0;
     z-index: -1
 }
-
-.sticky {}
 
 .start {
     /* background: #342F2F; */
@@ -167,7 +165,7 @@ nav {
     /* margin-left: 20px; */
     /* padding: 
     25px 25px 0px 25; */
-    height: 100%;
+    height: 90% !important;
     /* width:  */
     /* position: absolute; */
     display: block;
@@ -273,7 +271,6 @@ video {
 
 .fashion-text {
     font-family: 'Abel', sans-serif;
-
 }
 
 .fashion-text h1 {
@@ -428,7 +425,7 @@ video {
 .pro-text h1 {
     /* text-align: center; */
     font-size: 40pt;
-    margin-bottom: 30px;
+    margin-bottom: 75px;
 }
 
 .pro-text h4 {
@@ -617,6 +614,12 @@ hr {
     /* font-size: 15pt; */
 }
 
+.cs {
+    font-size: 30pt;
+    color: #004085;
+    font-family: 'Abel', sans-serif;
+}
+
 .school-photo {
     display: block;
     margin-left: auto;
@@ -627,13 +630,14 @@ hr {
 }
 
 .about {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.6);
     /* background: white; */
-    padding: 25px 200px 25px 200px;
+    /* padding: 25px 200px 25px 200px; */
     position: relative;
     display: block;
     /* z-index: 1; */
     color: white;
+    text-align: center;
 }
 
 .about::after {
@@ -669,6 +673,11 @@ hr {
     box-shadow: 5px 5px 35px;
 }
 
+#bw {
+    font-family: wilderness;
+    font-size: 50pt;
+}
+
 .contact-background {
     background-color: rgba(0, 0, 0, 0.6);
     display: block;
@@ -678,9 +687,10 @@ hr {
 
 .contact-background::after {
     content: '';
-    background-image: url(/static/vibrations_app/images/sidewalk-model.jpg);
+    background-image: url(/static/vibrations_app/images/am_bottom.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: top center;
+    background-position: ;
     position: absolute;
     display: block;
     top: 0;
@@ -688,6 +698,26 @@ hr {
     left: 0;
     right: 0;
     z-index: -1;
+}
+
+.a {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: block;
+    position: relative;
+}
+
+.a::after {
+    content: '';
+    background: url(/static/vibrations_app/images/am_bottom.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1
 }
 
 .sexy-line {
