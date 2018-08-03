@@ -457,6 +457,9 @@ video {
     display: block;
     padding-bottom: 50px;
 }
+.fam{
+    text-align: center;
+}
 
 .fashion::after {
     background-image: url(/static/vibrations_app/images/fashion-texture.jpg);
@@ -676,6 +679,7 @@ hr {
 #bw {
     font-family: wilderness;
     font-size: 50pt;
+    text-align: center;
 }
 
 .contact-background {
